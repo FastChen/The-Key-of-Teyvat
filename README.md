@@ -8,6 +8,8 @@
   <a href="https://github.com/FastChen/The-Key-of-Teyvat/releases"><img src="https://img.shields.io/github/v/release/fastchen/The-Key-of-Teyvat?label=Release"/></a>
 </div>
 
+## 最新版提瓦特之匙 已支持原神2.1版本切换 需要前往交流群下载。
+
 ## # 为什么制作这款本地工具？
 
 这款工具最初仅用于获取Authkey来对接[万能派蒙-祈愿查询](https://ys.nullcraft.org/gacha)(在线版祈愿数据查看)的，但是后续因为有朋友玩官服和B服两个账户，需要下载两个客户端所以就又添加了一个一客户端切换登录服务器的功能，通过结合游戏1.1版本的修改方法再加上自行测试，目前发现了一种通杀方法(修改两个config)的数据。所以这款工具就出现了，而且开源在这里。
@@ -15,7 +17,7 @@
 ## # 下载，仅在下面提供地址发布
 
 - [提瓦特厨神交流群群文件:711723320](https://jq.qq.com/?_wv=1027&k=uZdeXKvr)
-- [Github Releases](https://github.com/FastChen/The-Key-of-Teyvat/releases)
+- ~~Github Releases~~ 后续仅在交流群提供更新。
 
 ## # 一些图片
 
