@@ -22,7 +22,7 @@
 ## # 一些图片
 
 <img src="./image/the-key-of-teyvat_1.png" alt="提瓦特之匙" />
-<img src="./image/the-key-of-teyvat_1.png" alt="提瓦特之匙" />
+<img src="./image/the-key-of-teyvat_2.png" alt="提瓦特之匙" />
 
 ## # 更新计划
 
