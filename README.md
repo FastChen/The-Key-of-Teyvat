@@ -40,3 +40,7 @@ A:工具没有对游戏本身做修改，仅是对登录入口进行了切换，
 
 ## 一起联机，一起锄大地！
 [提瓦特厨神交流群:711723320](https://jq.qq.com/?_wv=1027&k=uZdeXKvr)
+
+## # 捐助支持
+
+[捐助我们](https://docs.nullcraft.org/donate) | [爱发电](https://afdian.net/@fastchen)
