@@ -5,7 +5,6 @@
   <img src="https://img.shields.io/github/stars/fastchen/The-Key-of-Teyvat?label=Star&logo=github"/>
   <a href="https://github.com/FastChen/The-Key-of-Teyvat/issues"><img src="https://img.shields.io/github/issues/fastchen/The-Key-of-Teyvat?label=Issues"/></a>
   <img src="https://img.shields.io/github/license/fastchen/The-Key-of-Teyvat?label=License"/>
-  <a href="https://github.com/FastChen/The-Key-of-Teyvat/releases"><img src="https://img.shields.io/github/v/release/fastchen/The-Key-of-Teyvat?label=Release"/></a>
 </div>
 
 ## 最新版提瓦特之匙 已支持原神2.1版本切换 需要前往交流群下载。
