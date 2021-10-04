@@ -33,10 +33,15 @@ namespace The_Key_of_Teyvat
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.TabControl_Main = new System.Windows.Forms.TabControl();
             this.TabPage_AuthKey = new System.Windows.Forms.TabPage();
+            this.Button_FindPath_AuthKey = new System.Windows.Forms.Button();
+            this.label6 = new System.Windows.Forms.Label();
+            this.TextBox_Path_AuthKey = new System.Windows.Forms.TextBox();
             this.LinkLabel_WebSite = new System.Windows.Forms.LinkLabel();
             this.Button_GetAuthKey = new System.Windows.Forms.Button();
             this.TextBox_AuthKey = new System.Windows.Forms.TextBox();
             this.TabPage_ServerSwitch = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.LinkLabel_SwitchServer = new System.Windows.Forms.LinkLabel();
             this.Button_GameRun_Direct = new System.Windows.Forms.Button();
             this.Button_GameRun_Normal = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -52,22 +57,23 @@ namespace The_Key_of_Teyvat
             this.label1 = new System.Windows.Forms.Label();
             this.TextBox_Path_Launcher = new System.Windows.Forms.TextBox();
             this.TabPage_About = new System.Windows.Forms.TabPage();
+            this.LinkLabel_Donate = new System.Windows.Forms.LinkLabel();
+            this.Label_Version = new System.Windows.Forms.Label();
             this.LinkLabel_JoinUs = new System.Windows.Forms.LinkLabel();
             this.label4 = new System.Windows.Forms.Label();
             this.ToolTip = new System.Windows.Forms.ToolTip(this.components);
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.StatusStrip = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel2 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.LinkLabel_SwitchServer = new System.Windows.Forms.LinkLabel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.TabControl_Main.SuspendLayout();
             this.TabPage_AuthKey.SuspendLayout();
             this.TabPage_ServerSwitch.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.TabPage_About.SuspendLayout();
-            this.statusStrip1.SuspendLayout();
+            this.StatusStrip.SuspendLayout();
             this.SuspendLayout();
             // 
             // TabControl_Main
@@ -83,6 +89,9 @@ namespace The_Key_of_Teyvat
             // 
             // TabPage_AuthKey
             // 
+            this.TabPage_AuthKey.Controls.Add(this.Button_FindPath_AuthKey);
+            this.TabPage_AuthKey.Controls.Add(this.label6);
+            this.TabPage_AuthKey.Controls.Add(this.TextBox_Path_AuthKey);
             this.TabPage_AuthKey.Controls.Add(this.LinkLabel_WebSite);
             this.TabPage_AuthKey.Controls.Add(this.Button_GetAuthKey);
             this.TabPage_AuthKey.Controls.Add(this.TextBox_AuthKey);
@@ -93,6 +102,33 @@ namespace The_Key_of_Teyvat
             this.TabPage_AuthKey.TabIndex = 0;
             this.TabPage_AuthKey.Text = "AuthKey获取";
             this.TabPage_AuthKey.UseVisualStyleBackColor = true;
+            // 
+            // Button_FindPath_AuthKey
+            // 
+            this.Button_FindPath_AuthKey.Location = new System.Drawing.Point(558, 7);
+            this.Button_FindPath_AuthKey.Name = "Button_FindPath_AuthKey";
+            this.Button_FindPath_AuthKey.Size = new System.Drawing.Size(38, 25);
+            this.Button_FindPath_AuthKey.TabIndex = 7;
+            this.Button_FindPath_AuthKey.Text = "...";
+            this.Button_FindPath_AuthKey.UseVisualStyleBackColor = true;
+            this.Button_FindPath_AuthKey.Click += new System.EventHandler(this.Button_FindPath_AuthKey_Click);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 11);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 17);
+            this.label6.TabIndex = 6;
+            this.label6.Text = "AuthKey目录:";
+            // 
+            // TextBox_Path_AuthKey
+            // 
+            this.TextBox_Path_AuthKey.Enabled = false;
+            this.TextBox_Path_AuthKey.Location = new System.Drawing.Point(91, 8);
+            this.TextBox_Path_AuthKey.Name = "TextBox_Path_AuthKey";
+            this.TextBox_Path_AuthKey.Size = new System.Drawing.Size(462, 23);
+            this.TextBox_Path_AuthKey.TabIndex = 5;
             // 
             // LinkLabel_WebSite
             // 
@@ -118,11 +154,11 @@ namespace The_Key_of_Teyvat
             // TextBox_AuthKey
             // 
             this.TextBox_AuthKey.Font = new System.Drawing.Font("微软雅黑", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.TextBox_AuthKey.Location = new System.Drawing.Point(5, 8);
+            this.TextBox_AuthKey.Location = new System.Drawing.Point(5, 39);
             this.TextBox_AuthKey.Multiline = true;
             this.TextBox_AuthKey.Name = "TextBox_AuthKey";
             this.TextBox_AuthKey.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TextBox_AuthKey.Size = new System.Drawing.Size(590, 224);
+            this.TextBox_AuthKey.Size = new System.Drawing.Size(590, 193);
             this.TextBox_AuthKey.TabIndex = 0;
             // 
             // TabPage_ServerSwitch
@@ -141,26 +177,48 @@ namespace The_Key_of_Teyvat
             this.TabPage_ServerSwitch.Text = "登录服务器切换";
             this.TabPage_ServerSwitch.UseVisualStyleBackColor = true;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.Gray;
+            this.label5.Location = new System.Drawing.Point(6, 165);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(430, 51);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "*修改登录服务器时需完全退出原神，以防修改失败。\r\n*2.1版本B服需要额外文件才能正常运行，目前切换至B服会自动释放所需文件。\r\n*修改无效请尝试 右键软件->" +
+    "以管理员身份运行";
+            // 
+            // LinkLabel_SwitchServer
+            // 
+            this.LinkLabel_SwitchServer.AutoSize = true;
+            this.LinkLabel_SwitchServer.Location = new System.Drawing.Point(305, 246);
+            this.LinkLabel_SwitchServer.Name = "LinkLabel_SwitchServer";
+            this.LinkLabel_SwitchServer.Size = new System.Drawing.Size(56, 17);
+            this.LinkLabel_SwitchServer.TabIndex = 5;
+            this.LinkLabel_SwitchServer.TabStop = true;
+            this.LinkLabel_SwitchServer.Text = "手动修改";
+            this.LinkLabel_SwitchServer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_SwitchServer_LinkClicked);
+            // 
             // Button_GameRun_Direct
             // 
             this.Button_GameRun_Direct.Enabled = false;
-            this.Button_GameRun_Direct.Location = new System.Drawing.Point(356, 239);
+            this.Button_GameRun_Direct.Location = new System.Drawing.Point(367, 239);
             this.Button_GameRun_Direct.Name = "Button_GameRun_Direct";
-            this.Button_GameRun_Direct.Size = new System.Drawing.Size(117, 31);
+            this.Button_GameRun_Direct.Size = new System.Drawing.Size(101, 31);
             this.Button_GameRun_Direct.TabIndex = 4;
             this.Button_GameRun_Direct.Text = "直接启动游戏";
-            this.ToolTip.SetToolTip(this.Button_GameRun_Direct, "跳过原神启动器，直接运行游戏，缺点如有更新无法获取。");
+            this.ToolTip.SetToolTip(this.Button_GameRun_Direct, "跳过原神启动器，直接运行游戏，缺点如有更新无法获取或出现数据异常等问题。");
             this.Button_GameRun_Direct.UseVisualStyleBackColor = true;
             this.Button_GameRun_Direct.Click += new System.EventHandler(this.Button_GameRun_Direct_Click);
             // 
             // Button_GameRun_Normal
             // 
             this.Button_GameRun_Normal.Enabled = false;
-            this.Button_GameRun_Normal.Location = new System.Drawing.Point(479, 239);
+            this.Button_GameRun_Normal.Location = new System.Drawing.Point(474, 239);
             this.Button_GameRun_Normal.Name = "Button_GameRun_Normal";
-            this.Button_GameRun_Normal.Size = new System.Drawing.Size(117, 31);
+            this.Button_GameRun_Normal.Size = new System.Drawing.Size(122, 31);
             this.Button_GameRun_Normal.TabIndex = 3;
-            this.Button_GameRun_Normal.Text = "[推荐] 启动游戏";
+            this.Button_GameRun_Normal.Text = "[推荐] 启动器启动";
             this.ToolTip.SetToolTip(this.Button_GameRun_Normal, "通过原神启动器进行启动游戏。\r\n如游戏有更新则可获取更新并下载。");
             this.Button_GameRun_Normal.UseVisualStyleBackColor = true;
             this.Button_GameRun_Normal.Click += new System.EventHandler(this.Button_GameRun_Normal_Click);
@@ -213,9 +271,6 @@ namespace The_Key_of_Teyvat
             this.ComboBox_Server_Name.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ComboBox_Server_Name.Enabled = false;
             this.ComboBox_Server_Name.FormattingEnabled = true;
-            this.ComboBox_Server_Name.Items.AddRange(new object[] {
-            "[miHoYo] 天空岛",
-            "[BiliBili] 世界树"});
             this.ComboBox_Server_Name.Location = new System.Drawing.Point(85, 23);
             this.ComboBox_Server_Name.Name = "ComboBox_Server_Name";
             this.ComboBox_Server_Name.Size = new System.Drawing.Size(140, 25);
@@ -267,6 +322,7 @@ namespace The_Key_of_Teyvat
             // 
             // TextBox_Path_Game
             // 
+            this.TextBox_Path_Game.Enabled = false;
             this.TextBox_Path_Game.Location = new System.Drawing.Point(85, 52);
             this.TextBox_Path_Game.Name = "TextBox_Path_Game";
             this.TextBox_Path_Game.Size = new System.Drawing.Size(451, 23);
@@ -283,6 +339,7 @@ namespace The_Key_of_Teyvat
             // 
             // TextBox_Path_Launcher
             // 
+            this.TextBox_Path_Launcher.Enabled = false;
             this.TextBox_Path_Launcher.Location = new System.Drawing.Point(85, 23);
             this.TextBox_Path_Launcher.Name = "TextBox_Path_Launcher";
             this.TextBox_Path_Launcher.Size = new System.Drawing.Size(451, 23);
@@ -290,6 +347,8 @@ namespace The_Key_of_Teyvat
             // 
             // TabPage_About
             // 
+            this.TabPage_About.Controls.Add(this.LinkLabel_Donate);
+            this.TabPage_About.Controls.Add(this.Label_Version);
             this.TabPage_About.Controls.Add(this.LinkLabel_JoinUs);
             this.TabPage_About.Controls.Add(this.label4);
             this.TabPage_About.Location = new System.Drawing.Point(4, 26);
@@ -299,6 +358,27 @@ namespace The_Key_of_Teyvat
             this.TabPage_About.TabIndex = 2;
             this.TabPage_About.Text = "关于软件";
             this.TabPage_About.UseVisualStyleBackColor = true;
+            // 
+            // LinkLabel_Donate
+            // 
+            this.LinkLabel_Donate.AutoSize = true;
+            this.LinkLabel_Donate.Location = new System.Drawing.Point(259, 246);
+            this.LinkLabel_Donate.Name = "LinkLabel_Donate";
+            this.LinkLabel_Donate.Size = new System.Drawing.Size(155, 17);
+            this.LinkLabel_Donate.TabIndex = 3;
+            this.LinkLabel_Donate.TabStop = true;
+            this.LinkLabel_Donate.Text = "支持我们 赞助我们 | 爱发电";
+            this.LinkLabel_Donate.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_Donate_LinkClicked);
+            // 
+            // Label_Version
+            // 
+            this.Label_Version.AutoSize = true;
+            this.Label_Version.ForeColor = System.Drawing.Color.Gray;
+            this.Label_Version.Location = new System.Drawing.Point(10, 246);
+            this.Label_Version.Name = "Label_Version";
+            this.Label_Version.Size = new System.Drawing.Size(104, 17);
+            this.Label_Version.TabIndex = 2;
+            this.Label_Version.Text = "当前版本:读取中...";
             // 
             // LinkLabel_JoinUs
             // 
@@ -321,18 +401,18 @@ namespace The_Key_of_Teyvat
             this.label4.Text = "本软件目前为临时作品，其中代码，逻辑均未作任何优化，只做了基本功能。后续将持续进行优化\r\n\r\n软件作者:快辰\r\n一起联机锄大地:提瓦特厨神交流群[71172332" +
     "0]\r\n\r\n偶尔做些小软件什么的。本软件主要是配合我另一个项目 https://ys.nullcraft.org - 万能派蒙";
             // 
-            // statusStrip1
+            // StatusStrip
             // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.StatusStrip.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.toolStripStatusLabel2,
             this.toolStripStatusLabel3});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 321);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(624, 26);
-            this.statusStrip1.SizingGrip = false;
-            this.statusStrip1.TabIndex = 1;
-            this.statusStrip1.Text = "statusStrip1";
+            this.StatusStrip.Location = new System.Drawing.Point(0, 321);
+            this.StatusStrip.Name = "StatusStrip";
+            this.StatusStrip.Size = new System.Drawing.Size(624, 26);
+            this.StatusStrip.SizingGrip = false;
+            this.StatusStrip.TabIndex = 1;
+            this.StatusStrip.Text = "StatusStrip";
             // 
             // toolStripStatusLabel1
             // 
@@ -361,26 +441,11 @@ namespace The_Key_of_Teyvat
             this.toolStripStatusLabel3.Text = "本工具已开源";
             this.toolStripStatusLabel3.Click += new System.EventHandler(this.toolStripStatusLabel3_Click);
             // 
-            // LinkLabel_SwitchServer
+            // NotifyIcon
             // 
-            this.LinkLabel_SwitchServer.AutoSize = true;
-            this.LinkLabel_SwitchServer.Location = new System.Drawing.Point(294, 246);
-            this.LinkLabel_SwitchServer.Name = "LinkLabel_SwitchServer";
-            this.LinkLabel_SwitchServer.Size = new System.Drawing.Size(56, 17);
-            this.LinkLabel_SwitchServer.TabIndex = 5;
-            this.LinkLabel_SwitchServer.TabStop = true;
-            this.LinkLabel_SwitchServer.Text = "手动修改";
-            this.LinkLabel_SwitchServer.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LinkLabel_SwitchServer_LinkClicked);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.Gray;
-            this.label5.Location = new System.Drawing.Point(14, 172);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(289, 17);
-            this.label5.TabIndex = 6;
-            this.label5.Text = "*修改登录服务器时需完全退出原神，以防修改失败。";
+            this.NotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("NotifyIcon.Icon")));
+            this.NotifyIcon.Text = "NotifyIcon";
+            this.NotifyIcon.Visible = true;
             // 
             // MainForm
             // 
@@ -388,7 +453,7 @@ namespace The_Key_of_Teyvat
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ClientSize = new System.Drawing.Size(624, 347);
-            this.Controls.Add(this.statusStrip1);
+            this.Controls.Add(this.StatusStrip);
             this.Controls.Add(this.TabControl_Main);
             this.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -397,6 +462,7 @@ namespace The_Key_of_Teyvat
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "提瓦特之匙 - The Key of Teyvat - FastChen";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.TabControl_Main.ResumeLayout(false);
             this.TabPage_AuthKey.ResumeLayout(false);
@@ -409,8 +475,8 @@ namespace The_Key_of_Teyvat
             this.groupBox1.PerformLayout();
             this.TabPage_About.ResumeLayout(false);
             this.TabPage_About.PerformLayout();
-            this.statusStrip1.ResumeLayout(false);
-            this.statusStrip1.PerformLayout();
+            this.StatusStrip.ResumeLayout(false);
+            this.StatusStrip.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -440,7 +506,7 @@ namespace The_Key_of_Teyvat
         private System.Windows.Forms.Button Button_GameRun_Direct;
         private System.Windows.Forms.Button Button_GameRun_Normal;
         private System.Windows.Forms.ToolTip ToolTip;
-        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.StatusStrip StatusStrip;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel2;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel3;
@@ -448,6 +514,12 @@ namespace The_Key_of_Teyvat
         private System.Windows.Forms.LinkLabel LinkLabel_JoinUs;
         private System.Windows.Forms.LinkLabel LinkLabel_SwitchServer;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.NotifyIcon NotifyIcon;
+        private System.Windows.Forms.Label Label_Version;
+        private System.Windows.Forms.LinkLabel LinkLabel_Donate;
+        private System.Windows.Forms.Button Button_FindPath_AuthKey;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox TextBox_Path_AuthKey;
     }
 }
 

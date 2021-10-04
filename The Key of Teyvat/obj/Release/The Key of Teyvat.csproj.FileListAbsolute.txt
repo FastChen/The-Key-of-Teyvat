@@ -1,9 +1,0 @@
-E:\CSharp\FastChen\The Key of Teyvat\The Key of Teyvat\bin\Release\The Key of Teyvat.exe
-E:\CSharp\FastChen\The Key of Teyvat\The Key of Teyvat\bin\Release\The Key of Teyvat.pdb
-E:\CSharp\FastChen\The Key of Teyvat\The Key of Teyvat\obj\Release\The Key of Teyvat.csproj.AssemblyReference.cache
-E:\CSharp\FastChen\The Key of Teyvat\The Key of Teyvat\obj\Release\The_Key_of_Teyvat.MainForm.resources
-E:\CSharp\FastChen\The Key of Teyvat\The Key of Teyvat\obj\Release\The_Key_of_Teyvat.Properties.Resources.resources
-E:\CSharp\FastChen\The Key of Teyvat\The Key of Teyvat\obj\Release\The Key of Teyvat.csproj.GenerateResource.cache
-E:\CSharp\FastChen\The Key of Teyvat\The Key of Teyvat\obj\Release\The Key of Teyvat.csproj.CoreCompileInputs.cache
-E:\CSharp\FastChen\The Key of Teyvat\The Key of Teyvat\obj\Release\The Key of Teyvat.exe
-E:\CSharp\FastChen\The Key of Teyvat\The Key of Teyvat\obj\Release\The Key of Teyvat.pdb
